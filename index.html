@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Hiparco 24 - Conquista San Marcos</title>
+    <!-- Font Awesome 6 (Free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container header-content">
+            <h1>Proyecto <span>Hiparco 24</span></h1>
+            <p>¿Sueñas con la UNMSM? Ciclo intensivo 2 meses. Temario completo. Inicio: 13 de octubre.</p>
+            <div class="btn-group">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank" class="btn btn-primary"><i class="fab fa-youtube"></i> Ver canal</a>
+                <a href="#" id="contactBtn" class="btn btn-outline"><i class="fab fa-whatsapp"></i> Contactar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- INFORMACIÓN DESTACADA -->
+    <section class="info-section">
+        <div class="container">
+            <h2 class="section-title">La academia que <span>necesitas</span></h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>2 meses intensivos</h3>
+                    <p>Desde cero hasta el nivel San Marcos. Clases diarias y material completo.</p>
+                    <div class="highlight">Inicio: 13 de octubre</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Temario completo</h3>
+                    <p>Trigonometría, Álgebra, Física, Aritmética, Geometría, Lenguaje y más.</p>
+                    <div class="highlight">+ separatas y prácticas</div>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon"><i class="fas fa-users"></i></div>
+                    <h3>Enfoque UNMSM</h3>
+                    <p>Clases especializadas en el estilo de examen de San Marcos.</p>
+                    <div class="highlight">Profesores expertos</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CURSOS (MATERIAS) -->
+    <section class="courses-section">
+        <div class="container">
+            <h2 class="section-title">Cursos del <span>ciclo</span></h2>
+            <div class="courses-grid">
+                <div class="course-item"><div class="course-icon"><i class="fas fa-shapes"></i></div><span>Trigonometría</span></div>
+                <div class="course-item"><div class="course-icon"><i class="fas fa-square-root-alt"></i></div><span>Álgebra</span></div>
+                <div class="course-item"><div class="course-icon"><i class="fas fa-atom"></i></div><span>Física</span></div>
+                <div class="course-item"><div class="course-icon"><i class="fas fa-calculator"></i></div><span>Aritmética</span></div>
+                <div class="course-item"><div class="course-icon"><i class="fas fa-draw-polygon"></i></div><span>Geometría</span></div>
+                <div class="course-item"><div class="course-icon"><i class="fas fa-language"></i></div><span>Lenguaje</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VIDEOS (CON TABS) -->
+    <section class="videos-section">
+        <div class="container">
+            <h2 class="section-title">Clases en <span>YouTube</span></h2>
+            
+            <!-- Tabs para cambiar entre recientes y populares -->
+            <div class="video-tabs">
+                <button class="tab-btn active" id="tab-recientes">📹 Más recientes</button>
+                <button class="tab-btn" id="tab-populares">🔥 Más vistos</button>
+            </div>
+
+            <!-- Contenedor para videos recientes -->
+            <div id="recientes-container" class="videos-grid active">
+                <!-- Se cargará dinámicamente con JS -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i> Cargando videos...
+                </div>
+            </div>
+
+            <!-- Contenedor para videos populares -->
+            <div id="populares-container" class="videos-grid">
+                <!-- Se cargará dinámicamente con JS -->
+                <div class="loading-spinner">
+                    <i class="fas fa-spinner fa-spin"></i> Cargando videos...
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-youtube"></i> Ver todos los videos
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- PLANES (PRECIO) -->
+    <section class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Inversión <span>del ciclo</span></h2>
+            <div class="pricing-card">
+                <i class="fas fa-graduation-cap" style="font-size: 48px; color: #f97316;"></i>
+                <div class="price">S/ 250 <small>/ ciclo</small></div>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check-circle"></i> Ciclo completo 2 meses</li>
+                    <li><i class="fas fa-check-circle"></i> Clases en vivo y grabadas</li>
+                    <li><i class="fas fa-check-circle"></i> Material digital incluido</li>
+                    <li><i class="fas fa-check-circle"></i> Grupo de consultas</li>
+                </ul>
+                <a href="#" id="pricingContactBtn" class="btn btn-primary btn-block"><i class="fab fa-whatsapp"></i> Quiero inscribirme</a>
+                <p style="margin-top: 16px; font-size: 0.9rem; color: #64748b;">Promoción por lanzamiento. <br>Precio referencial (250-300 soles).</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Logo sin depender de placeholder.com -->
+            <div style="width:80px; height:80px; background:#f97316; color:white; border-radius:50%; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; font-weight:bold; font-size:24px; margin-bottom: 16px;">H24</div>
+            <h3 style="color: white; margin-bottom: 8px;">Proyecto Hiparco 24</h3>
+            <p>Preparación exclusiva para la UNMSM</p>
+            <div class="social">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p style="margin-top: 24px;">&copy; 2025 Proyecto Hiparco 24. Hecho para jóvenes preuniversitarios y universitarios.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Principal -->
+    <script src="script.js"></script>
+</body>
+</html>
