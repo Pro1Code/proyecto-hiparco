@@ -273,4 +273,5 @@
         refreshVideos: loadVideos,
         config: CONFIG
     };
+
 })();
