@@ -7,7 +7,7 @@
         whatsappMessage: "¡Hola! Me interesa el ciclo intensivo Proyecto Hiparco.",
         
         // ===== CONFIGURACIÓN DE YOUTUBE =====
-        youtubeApiKey: "AIzaSyBGwdHNF0URK1peuqVoo5MnoyxgNocf-qM", // ✅ Tu API Key
+        youtubeApiKey: "AIzaSyAkbRd29yCAXeLrh9fflAfxDQX-FQ01LAQ", // ✅ Tu API Key
         channelId: "UChFS-gNiEcjLjXSg0Fl-TUQ", // ✅ Channel ID de Proyecto Hiparco
         maxResults: 10 // Pedimos 10 para luego filtrar
     };
@@ -275,3 +275,4 @@
     };
 
 })();
+
