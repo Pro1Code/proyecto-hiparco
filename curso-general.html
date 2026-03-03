@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso General - Proyecto Hiparco 24</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .course-detail {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .course-header h1 {
+            font-size: 2.5rem;
+            color: #0f172a;
+        }
+        
+        .course-header h1 span {
+            color: #f97316;
+        }
+        
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .course-content h2 {
+            color: #f97316;
+            margin: 30px 0 15px;
+            border-left: 4px solid #f97316;
+            padding-left: 15px;
+        }
+        
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-content li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .course-content li i {
+            color: #f97316;
+            width: 20px;
+        }
+        
+        .btn-volver {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 12px 30px;
+            background: #f97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-volver:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .area-item {
+            background: #f8fafc;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+        
+        .area-item:hover {
+            border-color: #f97316;
+            transform: translateY(-3px);
+        }
+        
+        .area-icon {
+            font-size: 2rem;
+            color: #f97316;
+            margin-bottom: 10px;
+        }
+        
+        .area-item h4 {
+            color: #0f172a;
+            margin-bottom: 8px;
+        }
+        
+        .area-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .material-card {
+            background: white;
+            border: 2px dashed #f97316;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .material-icon {
+            font-size: 3rem;
+            color: #f97316;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .areas-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Proyecto <span>Hiparco 24</span></h1>
+            <p>Curso General - Formación integral desde cero</p>
+            <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+        </div>
+    </header>
+
+    <section class="course-detail">
+        <div class="container">
+            <div class="course-header">
+                <h1>Curso <span>General</span></h1>
+                <p>Ideal para comenzar desde cero o reforzar bases</p>
+            </div>
+            
+            <div class="course-content">
+                <h2><i class="fas fa-seedling"></i> ¿Para quién es este curso?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Estudiantes que recién empiezan su preparación</li>
+                    <li><i class="fas fa-check-circle"></i> Personas que necesitan reforzar bases escolares</li>
+                    <li><i class="fas fa-check-circle"></i> Quienes desean una formación integral en todas las áreas</li>
+                    <li><i class="fas fa-check-circle"></i> Estudiantes de 1ero y 2do de secundaria</li>
+                </ul>
+                
+                <h2><i class="fas fa-layer-group"></i> Áreas de estudio</h2>
+                
+                <div class="areas-grid">
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-calculator"></i></div>
+                        <h4>Matemática</h4>
+                        <p>Aritmética, Álgebra, Geometría, Trigonometría básica</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-flask"></i></div>
+                        <h4>Ciencias</h4>
+                        <p>Física, Química, Biología - nivel introductorio</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-book"></i></div>
+                        <h4>Letras</h4>
+                        <p>Lenguaje, Literatura, Historia, Geografía</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-brain"></i></div>
+                        <h4>Humanidades</h4>
+                        <p>Psicología, Filosofía, Lógica</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-chart-line"></i></div>
+                        <h4>Razonamiento</h4>
+                        <p>Matemático, Verbal, Abstracto</p>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-icon"><i class="fas fa-globe"></i></div>
+                        <h4>Actualidad</h4>
+                        <p>Realidad nacional e internacional</p>
+                    </div>
+                </div>
+                
+                <div class="material-card">
+                    <div class="material-icon"><i class="fas fa-file-pdf"></i></div>
+                    <h3>+ separatas y prácticas</h3>
+                    <p>Todo el material incluido: separatas semanales, prácticas dirigidas, exámenes modelo y más.</p>
+                </div>
+                
+                <h2><i class="fas fa-book-open"></i> ¿Qué incluye?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Clases desde cero, explicaciones paso a paso</li>
+                    <li><i class="fas fa-check-circle"></i> Material didáctico especialmente diseñado</li>
+                    <li><i class="fas fa-check-circle"></i> Separatas semanales por cada curso</li>
+                    <li><i class="fas fa-check-circle"></i> Prácticas calificadas con retroalimentación</li>
+                    <li><i class="fas fa-check-circle"></i> Evaluaciones periódicas de progreso</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría en grupos pequeños</li>
+                    <li><i class="fas fa-check-circle"></i> Banco de ejercicios para practicar</li>
+                    <li><i class="fas fa-check-circle"></i> Acceso a clases grabadas por 3 meses</li>
+                </ul>
+                
+                <h2><i class="fas fa-clock"></i> Horarios</h2>
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Grupo mañana:</strong> Lunes a Viernes 9:00 am - 12:00 pm</li>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Grupo tarde:</strong> Lunes a Viernes 3:00 pm - 6:00 pm</li>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Grupo noche:</strong> Lunes a Viernes 7:00 pm - 10:00 pm</li>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Sábados:</strong> 9:00 am - 1:00 pm (reforzamiento)</li>
+                </ul>
+                
+                <h2><i class="fas fa-dollar-sign"></i> Inversión</h2>
+                <ul>
+                    <li><i class="fas fa-tag"></i> <strong>Ciclo completo (2 meses):</strong> S/ 200</li>
+                    <li><i class="fas fa-tag"></i> <strong>Mensualidad:</strong> S/ 120</li>
+                    <li><i class="fas fa-tag"></i> <strong>Material incluido:</strong> Separatas, prácticas, evaluaciones</li>
+                    <li><i class="fas fa-tag"></i> <strong>Descuento familiar:</strong> 15% para 2 hermanos</li>
+                </ul>
+                
+                <h2><i class="fas fa-star"></i> Beneficios</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Clases dinámicas y participativas</li>
+                    <li><i class="fas fa-check-circle"></i> Profesores con experiencia en niveles básicos</li>
+                    <li><i class="fas fa-check-circle"></i> Grupos reducidos (máx. 20 alumnos)</li>
+                    <li><i class="fas fa-check-circle"></i> Seguimiento personalizado del avance</li>
+                    <li><i class="fas fa-check-circle"></i> Posibilidad de cambio a otros cursos según progreso</li>
+                </ul>
+                
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="#" id="contactBtn" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i> Consultar horarios disponibles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">H24</div>
+            <h3 style="color: white; margin-bottom: 8px;">Proyecto Hiparco 24</h3>
+            <p>Preparación exclusiva para la UNMSM</p>
+            <div class="social">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p style="margin-top: 24px;">&copy; 2025 Proyecto Hiparco 24</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
