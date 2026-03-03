@@ -567,4 +567,22 @@ body {
     .pricing-card .price {
         font-size: 2.8rem;
     }
+
+}
+
+/* Tarjetas clickeables */
+.info-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.info-card-link:hover {
+    transform: translateY(-5px);
+}
+
+.info-card {
+    cursor: pointer;
+    height: 100%;
 }
