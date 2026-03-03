@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Escolar - Proyecto Hiparco 24</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .course-detail {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .course-header h1 {
+            font-size: 2.5rem;
+            color: #0f172a;
+        }
+        
+        .course-header h1 span {
+            color: #f97316;
+        }
+        
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .course-content h2 {
+            color: #f97316;
+            margin: 30px 0 15px;
+        }
+        
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-content li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .course-content li i {
+            color: #f97316;
+            width: 20px;
+        }
+        
+        .btn-volver {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 12px 30px;
+            background: #f97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-volver:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Proyecto <span>Hiparco 24</span></h1>
+            <p>Curso Escolar - Preparación adaptada a tu nivel</p>
+            <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+        </div>
+    </header>
+
+    <section class="course-detail">
+        <div class="container">
+            <div class="course-header">
+                <h1>Curso <span>Escolar</span></h1>
+                <p>Para estudiantes de 3ro, 4to y 5to de secundaria</p>
+            </div>
+            
+            <div class="course-content">
+                <h2><i class="fas fa-book-open"></i> ¿Qué incluye?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Clases en vivo por Zoom</li>
+                    <li><i class="fas fa-check-circle"></i> Material digital descargable</li>
+                    <li><i class="fas fa-check-circle"></i> Separatas semanales</li>
+                    <li><i class="fas fa-check-circle"></i> Prácticas calificadas</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría personalizada</li>
+                </ul>
+                
+                <h2><i class="fas fa-flask"></i> Cursos incluidos</h2>
+                <ul>
+                    <li><i class="fas fa-shapes"></i> Trigonometría</li>
+                    <li><i class="fas fa-square-root-alt"></i> Álgebra</li>
+                    <li><i class="fas fa-atom"></i> Física</li>
+                    <li><i class="fas fa-calculator"></i> Aritmética</li>
+                    <li><i class="fas fa-draw-polygon"></i> Geometría</li>
+                    <li><i class="fas fa-language"></i> Lenguaje</li>
+                    <li><i class="fas fa-scroll"></i> Historia</li>
+                    <li><i class="fas fa-globe-americas"></i> Geografía</li>
+                </ul>
+                
+                <h2><i class="fas fa-clock"></i> Horarios</h2>
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i> Lunes a Viernes: 4:00 pm - 8:00 pm</li>
+                    <li><i class="fas fa-calendar-alt"></i> Sábados: 9:00 am - 1:00 pm</li>
+                </ul>
+                
+                <h2><i class="fas fa-dollar-sign"></i> Inversión</h2>
+                <ul>
+                    <li><i class="fas fa-tag"></i> Mensualidad: S/ 150</li>
+                    <li><i class="fas fa-tag"></i> Trimestral: S/ 400 (ahorras S/ 50)</li>
+                    <li><i class="fas fa-tag"></i> Material incluido</li>
+                </ul>
+                
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#" id="contactBtn" class="btn btn-primary"><i class="fab fa-whatsapp"></i> Consultar vacantes</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">H24</div>
+            <h3 style="color: white; margin-bottom: 8px;">Proyecto Hiparco 24</h3>
+            <p>Preparación exclusiva para la UNMSM</p>
+            <div class="social">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
