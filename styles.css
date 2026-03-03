@@ -570,6 +570,54 @@ body {
 
 }
 
+/* ===== TARJETAS EN 2x2 ===== */
+.info-grid-2x2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ===== CURSOS EN 3 COLUMNAS ===== */
+.courses-grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Mantener estilos existentes de course-item */
+.courses-grid-3 .course-item {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.courses-grid-3 .course-item:hover {
+    border-color: var(--primary);
+    background: #fff7ed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .info-grid-2x2 {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .courses-grid-3 {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Tarjetas clickeables */
 .info-card-link {
     text-decoration: none;
@@ -582,7 +630,8 @@ body {
     transform: translateY(-5px);
 }
 
-.info-card {
+.info-card-link .info-card {
     cursor: pointer;
     height: 100%;
 }
+
