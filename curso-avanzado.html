@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Avanzado - Proyecto Hiparco 24</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .course-detail {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .course-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .course-header h1 {
+            font-size: 2.5rem;
+            color: #0f172a;
+        }
+        
+        .course-header h1 span {
+            color: #f97316;
+        }
+        
+        .course-content {
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        .course-content h2 {
+            color: #f97316;
+            margin: 30px 0 15px;
+            border-left: 4px solid #f97316;
+            padding-left: 15px;
+        }
+        
+        .course-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .course-content li {
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .course-content li i {
+            color: #f97316;
+            width: 20px;
+        }
+        
+        .btn-volver {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 12px 30px;
+            background: #f97316;
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-volver:hover {
+            background: #ea580c;
+            transform: translateY(-2px);
+        }
+        
+        .topics-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .topic-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+        
+        .topic-item h4 {
+            color: #f97316;
+            margin-bottom: 8px;
+        }
+        
+        .topic-item p {
+            color: #64748b;
+            font-size: 0.9rem;
+        }
+        
+        .profesor-card {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .profesor-icon {
+            width: 80px;
+            height: 80px;
+            background: #f97316;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+        }
+        
+        .profesor-info h3 {
+            color: #f97316;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .topics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .profesor-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <h1>Proyecto <span>Hiparco 24</span></h1>
+            <p>Curso Avanzado - Especialización en ciencias</p>
+            <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
+        </div>
+    </header>
+
+    <section class="course-detail">
+        <div class="container">
+            <div class="course-header">
+                <h1>Curso <span>Avanzado</span></h1>
+                <p>Para estudiantes que buscan la excelencia académica</p>
+            </div>
+            
+            <div class="course-content">
+                <div class="profesor-card">
+                    <div class="profesor-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <div class="profesor-info">
+                        <h3>Profesores expertos</h3>
+                        <p>Equipo de docentes especializados en preparación para universidades de excelencia. Más de 10 años de experiencia formando ingresantes a San Marcos, UNI y PUCP.</p>
+                    </div>
+                </div>
+                
+                <h2><i class="fas fa-rocket"></i> Nivel Avanzado</h2>
+                <p>Curso diseñado para estudiantes que ya tienen una base sólida y buscan profundizar en temas complejos para alcanzar los puntajes más altos en los exámenes de admisión.</p>
+                
+                <h2><i class="fas fa-flask"></i> Temas avanzados por curso</h2>
+                
+                <div class="topics-grid">
+                    <div class="topic-item">
+                        <h4>Trigonometría Avanzada</h4>
+                        <p>Funciones trigonométricas inversas, ecuaciones paramétricas, números complejos</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Álgebra Superior</h4>
+                        <p>Matrices, determinantes, programación lineal, sucesiones y series</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Física Moderna</h4>
+                        <p>Física cuántica, relatividad, electromagnetismo avanzado</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Cálculo Diferencial</h4>
+                        <p>Límites, derivadas, aplicaciones, optimización</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Cálculo Integral</h4>
+                        <p>Integrales definidas, indefinidas, aplicaciones</p>
+                    </div>
+                    <div class="topic-item">
+                        <h4>Geometría Analítica</h4>
+                        <p>Cónicas, lugares geométricos, coordenadas polares</p>
+                    </div>
+                </div>
+                
+                <h2><i class="fas fa-book-open"></i> ¿Qué incluye?</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Clases en vivo con enfoque en problemas complejos</li>
+                    <li><i class="fas fa-check-circle"></i> Material de nivel avanzado con ejercicios tipo</li>
+                    <li><i class="fas fa-check-circle"></i> Prácticas semanales de alta dificultad</li>
+                    <li><i class="fas fa-check-circle"></i> Simulacros con preguntas de exámenes de admisión</li>
+                    <li><i class="fas fa-check-circle"></i> Asesoría personalizada con los profesores</li>
+                    <li><i class="fas fa-check-circle"></i> Banco de problemas resueltos paso a paso</li>
+                    <li><i class="fas fa-check-circle"></i> Grupo de estudio exclusivo para alumnos avanzados</li>
+                    <li><i class="fas fa-check-circle"></i> Sesiones de resolución de problemas en equipo</li>
+                </ul>
+                
+                <h2><i class="fas fa-clock"></i> Horarios</h2>
+                <ul>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Lunes, Miércoles y Viernes:</strong> 7:00 pm - 10:00 pm</li>
+                    <li><i class="fas fa-calendar-alt"></i> <strong>Sábados:</strong> 3:00 pm - 7:00 pm (prácticas dirigidas)</li>
+                </ul>
+                
+                <h2><i class="fas fa-dollar-sign"></i> Inversión</h2>
+                <ul>
+                    <li><i class="fas fa-tag"></i> <strong>Ciclo completo (2 meses):</strong> S/ 300</li>
+                    <li><i class="fas fa-tag"></i> <strong>Mensualidad:</strong> S/ 180</li>
+                    <li><i class="fas fa-tag"></i> <strong>Material especializado incluido</strong></li>
+                    <li><i class="fas fa-tag"></i> <strong>Pronto pago (hasta el 10 de octubre):</strong> S/ 270</li>
+                </ul>
+                
+                <h2><i class="fas fa-trophy"></i> Requisitos</h2>
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Haber llevado curso preuniversitario básico</li>
+                    <li><i class="fas fa-check-circle"></i> Conocimientos sólidos de matemática y física</li>
+                    <li><i class="fas fa-check-circle"></i> Evaluación de diagnóstico (gratuita)</li>
+                    <li><i class="fas fa-check-circle"></i> Compromiso de dedicación (mínimo 15 horas semanales)</li>
+                </ul>
+                
+                <div style="text-align: center; margin: 40px 0;">
+                    <a href="#" id="contactBtn" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i> Solicitar evaluación diagnóstica</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">H24</div>
+            <h3 style="color: white; margin-bottom: 8px;">Proyecto Hiparco 24</h3>
+            <p>Preparación exclusiva para la UNMSM</p>
+            <div class="social">
+                <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p style="margin-top: 24px;">&copy; 2025 Proyecto Hiparco 24</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
