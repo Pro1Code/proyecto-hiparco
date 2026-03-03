@@ -19,11 +19,11 @@
         
         .course-header h1 {
             font-size: 2.5rem;
-            color: #0f172a;
+            color: var(--dark-bg);
         }
         
         .course-header h1 span {
-            color: #f97316;
+            color: var(--primary);
         }
         
         .course-content {
@@ -33,9 +33,9 @@
         }
         
         .course-content h2 {
-            color: #f97316;
+            color: var(--primary);
             margin: 30px 0 15px;
-            border-left: 4px solid #f97316;
+            border-left: 4px solid var(--primary);
             padding-left: 15px;
         }
         
@@ -46,32 +46,15 @@
         
         .course-content li {
             padding: 10px 0;
-            border-bottom: 1px solid #e2e8f0;
+            border-bottom: 1px solid var(--border);
             display: flex;
             align-items: center;
             gap: 10px;
         }
         
         .course-content li i {
-            color: #f97316;
+            color: var(--primary);
             width: 20px;
-        }
-        
-        .btn-volver {
-            display: inline-block;
-            margin: 30px 0;
-            padding: 12px 30px;
-            background: #f97316;
-            color: white;
-            text-decoration: none;
-            border-radius: 30px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-volver:hover {
-            background: #ea580c;
-            transform: translateY(-2px);
         }
         
         .stats-grid {
@@ -83,26 +66,26 @@
         }
         
         .stat-item {
-            background: #f8fafc;
+            background: var(--light-bg);
             padding: 20px;
             border-radius: 12px;
-            border: 1px solid #e2e8f0;
+            border: 1px solid var(--border);
         }
         
         .stat-number {
             font-size: 2rem;
             font-weight: 700;
-            color: #f97316;
+            color: var(--primary);
         }
         
         .stat-label {
-            color: #64748b;
+            color: var(--text-light);
             font-size: 0.9rem;
         }
         
         .highlight-box {
-            background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
-            color: white;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--dark-bg);
             padding: 20px;
             border-radius: 12px;
             margin: 20px 0;
@@ -113,13 +96,80 @@
             font-size: 2rem;
             margin-bottom: 10px;
         }
+
+        /* ===== BOTONES DE UNIVERSIDADES ===== */
+        .university-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+
+        .uni-btn {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--text-dark);
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .uni-btn:hover {
+            background: var(--primary);
+            color: var(--dark-bg);
+            transform: translateY(-2px);
+        }
+
+        .uni-btn.active {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-color: var(--secondary);
+            color: var(--dark-bg);
+        }
+
+        /* ===== CONTENEDORES DE CURSOS POR UNIVERSIDAD ===== */
+        .cursos-uni {
+            display: none;
+        }
+
+        .cursos-uni.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .uni-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+        .uni-title i {
+            margin-right: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .uni-btn {
+                padding: 8px 12px;
+                font-size: 0.85rem;
+            }
+        }
     </style>
 </head>
 <body>
     <header class="header">
         <div class="container header-content">
             <h1>Proyecto <span>Hiparco 24</span></h1>
-            <p>Academia Preuniversitario - Tu camino a San Marcos</p>
+            <p>Academia Preuniversitario - Tu camino a la universidad</p>
             <a href="index.html" class="btn btn-outline"><i class="fas fa-arrow-left"></i> Volver al inicio</a>
         </div>
     </header>
@@ -128,7 +178,7 @@
         <div class="container">
             <div class="course-header">
                 <h1>Academia <span>Preuniversitario</span></h1>
-                <p>Preparación intensiva para postulantes a San Marcos</p>
+                <p>Preparación intensiva para las mejores universidades del Perú</p>
             </div>
             
             <div class="stats-grid">
@@ -148,7 +198,7 @@
             
             <div class="course-content">
                 <h2><i class="fas fa-bullseye"></i> Objetivo del curso</h2>
-                <p>Preparación integral enfocada en el examen de admisión a la Universidad Nacional Mayor de San Marcos (UNMSM) y otras universidades nacionales.</p>
+                <p>Preparación integral enfocada en los exámenes de admisión a las principales universidades nacionales del Perú.</p>
                 
                 <div class="highlight-box">
                     <i class="fas fa-calendar-alt"></i>
@@ -162,160 +212,254 @@
                     <li><i class="fas fa-check-circle"></i> Material digital descargable en PDF</li>
                     <li><i class="fas fa-check-circle"></i> Separatas semanales con ejercicios</li>
                     <li><i class="fas fa-check-circle"></i> Prácticas calificadas cada semana</li>
-                    <li><i class="fas fa-check-circle"></i> Simulacros tipo examen San Marcos</li>
+                    <li><i class="fas fa-check-circle"></i> Simulacros tipo examen de admisión</li>
                     <li><i class="fas fa-check-circle"></i> Asesoría personalizada vía WhatsApp</li>
                     <li><i class="fas fa-check-circle"></i> Grupo de estudio con otros postulantes</li>
                     <li><i class="fas fa-check-circle"></i> Banco de preguntas de exámenes anteriores</li>
                 </ul>
                 
-                <h2><i class="fas fa-flask"></i> Temario completo</h2>
+                <h2><i class="fas fa-flask"></i> Áreas de estudio</h2>
                 <ul>
                     <li><i class="fas fa-square-root-alt"></i> <strong>Matemática:</strong> Aritmética, Álgebra, Geometría, Trigonometría</li>
                     <li><i class="fas fa-atom"></i> <strong>Física:</strong> Análisis vectorial, cinemática, dinámica, trabajo y energía, electromagnetismo</li>
                     <li><i class="fas fa-flask"></i> <strong>Química:</strong> Tabla periódica, enlaces químicos, reacciones, estequiometría</li>
                 </ul>
 
-                <!-- ===== CURSOS DETALLADOS CON DESPLEGABLES ===== -->
-                <h2 style="margin-top: 50px;"><i class="fas fa-book-open"></i> Cursos <span style="color: var(--primary);">detallados</span></h2>
-                <p style="margin-bottom: 30px; color: var(--text-dark);">Pasa el mouse sobre cada curso para ver sus temas:</p>
-                
-                <div class="courses-grid-7">
-                    <!-- 1. Trigonometría -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                            <span>Trigonometría</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Razones trigonométricas</li>
-                                <li>✓ Identidades trigonométricas</li>
-                                <li>✓ Funciones trigonométricas</li>
-                                <li>✓ Ecuaciones trigonométricas</li>
-                                <li>✓ Resolución de triángulos</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 2. Álgebra -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                            <span>Álgebra</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Productos notables</li>
-                                <li>✓ Factorización</li>
-                                <li>✓ Ecuaciones lineales</li>
-                                <li>✓ Ecuaciones cuadráticas</li>
-                                <li>✓ Inecuaciones</li>
-                                <li>✓ Funciones</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 3. Física -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-atom"></i></div>
-                            <span>Física</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Análisis vectorial</li>
-                                <li>✓ Cinemática (MRU, MRUV)</li>
-                                <li>✓ Dinámica (leyes de Newton)</li>
-                                <li>✓ Trabajo y energía</li>
-                                <li>✓ Electrostática</li>
-                                <li>✓ Corriente eléctrica</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 4. Aritmética -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                            <span>Aritmética</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Teoría de números</li>
-                                <li>✓ Fracciones</li>
-                                <li>✓ Regla de tres</li>
-                                <li>✓ Porcentajes</li>
-                                <li>✓ Interés simple y compuesto</li>
-                                <li>✓ Estadística básica</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 5. Geometría -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                            <span>Geometría</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Ángulos y triángulos</li>
-                                <li>✓ Semejanza de triángulos</li>
-                                <li>✓ Circunferencia</li>
-                                <li>✓ Geometría del espacio</li>
-                                <li>✓ Áreas y volúmenes</li>
-                                <li>✓ Geometría analítica</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 6. Química -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-flask"></i></div>
-                            <span>Química</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Tabla periódica</li>
-                                <li>✓ Enlaces químicos</li>
-                                <li>✓ Reacciones químicas</li>
-                                <li>✓ Estequiometría</li>
-                                <li>✓ Química orgánica</li>
-                                <li>✓ Soluciones</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- 7. Razonamiento Matemático -->
-                    <div class="course-hover-card">
-                        <div class="course-item">
-                            <div class="course-icon"><i class="fas fa-brain"></i></div>
-                            <span>Raz. Matemático</span>
-                            <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                        </div>
-                        <div class="course-topics">
-                            <ul>
-                                <li>✓ Razonamiento lógico</li>
-                                <li>✓ Problemas con edades</li>
-                                <li>✓ Problemas con móviles</li>
-                                <li>✓ Problemas con relojes</li>
-                                <li>✓ Razonamiento geométrico</li>
-                                <li>✓ Sucesiones y series</li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Espacio vacío -->
-                    <div class="course-hover-card empty-card"></div>
+                <!-- ===== CURSOS POR UNIVERSIDAD ===== -->
+                <h2 style="margin-top: 50px;"><i class="fas fa-university"></i> Cursos por <span style="color: var(--primary);">universidad</span></h2>
+                <p style="margin-bottom: 30px; color: var(--text-dark);">Selecciona el centro preuniversitario de tu interés:</p>
+
+                <!-- Botones de universidades -->
+                <div class="university-tabs">
+                    <button class="uni-btn active" data-uni="uni">Cepre UNI</button>
+                    <button class="uni-btn" data-uni="unsmsm">Cepre UNMSM</button>
+                    <button class="uni-btn" data-uni="pucp">CEPREPUCP</button>
+                    <button class="uni-btn" data-uni="vi">CEPREVI</button>
+                    <button class="uni-btn" data-uni="unsa">CEPRUNSA</button>
+                    <button class="uni-btn" data-uni="unac">CEPREUNAC</button>
+                    <button class="uni-btn" data-uni="unt">CEPREUNT</button>
+                    <button class="uni-btn" data-uni="unal">CEPREUNALM</button>
                 </div>
-                
+
+                <!-- Contenedor de cursos que cambian según universidad -->
+                <div id="cursos-container">
+                    <!-- Cepre UNI -->
+                    <div class="cursos-uni active" id="cursos-uni">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> Cepre UNI - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Trigonometría -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
+                                    <span>Trigonometría</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Razones trigonométricas</li>
+                                        <li>✓ Identidades trigonométricas</li>
+                                        <li>✓ Funciones trigonométricas</li>
+                                        <li>✓ Ecuaciones trigonométricas</li>
+                                        <li>✓ Resolución de triángulos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Álgebra -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
+                                    <span>Álgebra</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Productos notables</li>
+                                        <li>✓ Factorización</li>
+                                        <li>✓ Ecuaciones lineales</li>
+                                        <li>✓ Ecuaciones cuadráticas</li>
+                                        <li>✓ Inecuaciones</li>
+                                        <li>✓ Funciones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Física -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
+                                    <span>Física</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Análisis vectorial</li>
+                                        <li>✓ Cinemática (MRU, MRUV)</li>
+                                        <li>✓ Dinámica (leyes de Newton)</li>
+                                        <li>✓ Trabajo y energía</li>
+                                        <li>✓ Electrostática</li>
+                                        <li>✓ Corriente eléctrica</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Aritmética -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
+                                    <span>Aritmética</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Teoría de números</li>
+                                        <li>✓ Fracciones</li>
+                                        <li>✓ Regla de tres</li>
+                                        <li>✓ Porcentajes</li>
+                                        <li>✓ Interés simple y compuesto</li>
+                                        <li>✓ Estadística básica</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Geometría -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
+                                    <span>Geometría</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Ángulos y triángulos</li>
+                                        <li>✓ Semejanza de triángulos</li>
+                                        <li>✓ Circunferencia</li>
+                                        <li>✓ Geometría del espacio</li>
+                                        <li>✓ Áreas y volúmenes</li>
+                                        <li>✓ Geometría analítica</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Química -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
+                                    <span>Química</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Tabla periódica</li>
+                                        <li>✓ Enlaces químicos</li>
+                                        <li>✓ Reacciones químicas</li>
+                                        <li>✓ Estequiometría</li>
+                                        <li>✓ Química orgánica</li>
+                                        <li>✓ Soluciones</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Razonamiento Matemático -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
+                                    <span>Raz. Matemático</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Razonamiento lógico</li>
+                                        <li>✓ Problemas con edades</li>
+                                        <li>✓ Problemas con móviles</li>
+                                        <li>✓ Problemas con relojes</li>
+                                        <li>✓ Razonamiento geométrico</li>
+                                        <li>✓ Sucesiones y series</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="course-hover-card empty-card"></div>
+                        </div>
+                    </div>
+
+                    <!-- Cepre UNMSM -->
+                    <div class="cursos-uni" id="cursos-unsmsm">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> Cepre UNMSM - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Mismos cursos (los modificarás manualmente) -->
+                            <div class="course-hover-card">
+                                <div class="course-item">
+                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
+                                    <span>Trigonometría</span>
+                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
+                                </div>
+                                <div class="course-topics">
+                                    <ul>
+                                        <li>✓ Razones trigonométricas</li>
+                                        <li>✓ Identidades trigonométricas</li>
+                                        <li>✓ Funciones trigonométricas</li>
+                                        <li>✓ Ecuaciones trigonométricas</li>
+                                        <li>✓ Resolución de triángulos</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- ... (repetir los 7 cursos igual que arriba) ... -->
+                            <!-- Por brevedad, copia los mismos 7 cursos de arriba aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPREPUCP -->
+                    <div class="cursos-uni" id="cursos-pucp">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREPUCP - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPREVI -->
+                    <div class="cursos-uni" id="cursos-vi">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREVI - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPRUNSA -->
+                    <div class="cursos-uni" id="cursos-unsa">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPRUNSA - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPREUNAC -->
+                    <div class="cursos-uni" id="cursos-unac">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNAC - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPREUNT -->
+                    <div class="cursos-uni" id="cursos-unt">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNT - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+
+                    <!-- CEPREUNALM -->
+                    <div class="cursos-uni" id="cursos-unal">
+                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNALM - Temario</h3>
+                        <div class="courses-grid-7">
+                            <!-- Copia los mismos 7 cursos aquí -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HORARIOS -->
                 <h2><i class="fas fa-clock"></i> Horarios</h2>
                 <ul>
                     <li><i class="fas fa-calendar-alt"></i> <strong>Lunes a Viernes:</strong> 6:00 pm - 10:00 pm</li>
@@ -334,13 +478,15 @@
                 <h2><i class="fas fa-star"></i> ¿Por qué elegirnos?</h2>
                 <ul>
                     <li><i class="fas fa-check-circle"></i> <strong>Profesores especializados</strong> en preparación preuniversitaria</li>
-                    <li><i class="fas fa-check-circle"></i> <strong>Metodología probada</strong> con ingresantes a San Marcos</li>
+                    <li><i class="fas fa-check-circle"></i> <strong>Metodología probada</strong> con ingresantes a las mejores universidades</li>
                     <li><i class="fas fa-check-circle"></i> <strong>Clases dinámicas</strong> con ejemplos de exámenes reales</li>
                     <li><i class="fas fa-check-circle"></i> <strong>Seguimiento personalizado</strong> de tu progreso</li>
                 </ul>
                 
                 <div style="text-align: center; margin: 40px 0;">
-                    <a href="#" id="contactBtn" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.2rem;"><i class="fab fa-whatsapp"></i> Consultar vacantes</a>
+                    <a href="#" id="contactBtn" class="btn btn-primary" style="padding: 16px 40px; font-size: 1.2rem;">
+                        <i class="fab fa-whatsapp"></i> Consultar vacantes
+                    </a>
                 </div>
             </div>
         </div>
@@ -350,7 +496,7 @@
         <div class="container">
             <div class="footer-logo">H24</div>
             <h3 style="color: white; margin-bottom: 8px;">Proyecto Hiparco 24</h3>
-            <p>Preparación exclusiva para la UNMSM</p>
+            <p>Preparación exclusiva para las mejores universidades del Perú</p>
             <div class="social">
                 <a href="https://www.youtube.com/@ProyectoHiparco24/featured" target="_blank"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-tiktok"></i></a>
@@ -360,6 +506,33 @@
             <p style="margin-top: 24px;">&copy; 2025 Proyecto Hiparco 24</p>
         </div>
     </footer>
+
+    <script>
+        // Funcionalidad para cambiar cursos según universidad
+        document.addEventListener('DOMContentLoaded', function() {
+            const uniBtns = document.querySelectorAll('.uni-btn');
+            const cursosUni = document.querySelectorAll('.cursos-uni');
+            
+            uniBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    // Remover active de todos los botones
+                    uniBtns.forEach(b => b.classList.remove('active'));
+                    // Agregar active al botón clickeado
+                    this.classList.add('active');
+                    
+                    // Ocultar todos los contenedores de cursos
+                    cursosUni.forEach(c => c.classList.remove('active'));
+                    
+                    // Mostrar el contenedor correspondiente
+                    const uni = this.getAttribute('data-uni');
+                    const contenedor = document.getElementById(`cursos-${uni}`);
+                    if (contenedor) {
+                        contenedor.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
