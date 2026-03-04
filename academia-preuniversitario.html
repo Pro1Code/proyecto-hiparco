@@ -386,9 +386,6 @@
 
     <script>
         // ===== DATOS DE LAS UNIVERSIDADES =====
-        // ===== DATOS DE LAS UNIVERSIDADES =====
-const universidades = {
-    // ===== DATOS DE LAS UNIVERSIDADES =====
 const universidades = {
     uni: {
         nombre: "Cepre UNI",
@@ -571,7 +568,6 @@ const universidades = {
             ]
         }
     },
-    // ===== NUEVAS UNIVERSIDADES =====
     pucp: {
         nombre: "CEPREPUCP",
         cursos: {
@@ -963,14 +959,7 @@ function generarHTMLUniversidad(id) {
                     <div class="temas-lista">
                         <ul>
                             ${uni.cursos[curso.key].map(tema => {
-                                // Si es un objeto con nombre y link
-                                if (typeof tema === 'object' && tema.link) {
-                                    return `<li><a href="${tema.link}" target="_blank" class="tema-link">${tema.nombre} <i class="fas fa-download"></i></a></li>`;
-                                } 
-                                // Si es solo texto (sin link)
-                                else {
-                                    return `<li>${tema}</li>`;
-                                }
+                                return `<li>${tema.nombre}</li>`;
                             }).join('')}
                         </ul>
                     </div>
@@ -982,6 +971,43 @@ function generarHTMLUniversidad(id) {
     html += '</div>';
     return html;
 }
+
+// ===== CARGAR UNIVERSIDADES AL INICIAR =====
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('cursos-container');
+    let htmlCompleto = '';
+    
+    // Generar HTML para cada universidad
+    htmlCompleto += generarHTMLUniversidad('uni');
+    htmlCompleto += generarHTMLUniversidad('unsmsm');
+    htmlCompleto += generarHTMLUniversidad('pucp');
+    htmlCompleto += generarHTMLUniversidad('vi');
+    htmlCompleto += generarHTMLUniversidad('unsa');
+    htmlCompleto += generarHTMLUniversidad('unac');
+    htmlCompleto += generarHTMLUniversidad('unt');
+    htmlCompleto += generarHTMLUniversidad('unal');
+    
+    container.innerHTML = htmlCompleto;
+    
+    // Funcionalidad de los botones de universidades
+    const uniBtns = document.querySelectorAll('.uni-btn');
+    const cursosUni = document.querySelectorAll('.cursos-uni');
+    
+    uniBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            uniBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            cursosUni.forEach(c => c.classList.remove('active'));
+            
+            const uni = this.getAttribute('data-uni');
+            const contenedor = document.getElementById(`cursos-${uni}`);
+            if (contenedor) {
+                contenedor.classList.add('active');
+            }
+        });
+    });
+});
     </script>
 
     <script src="script.js"></script>
