@@ -3,7 +3,7 @@
 (function() {
     // ===== CONFIGURACIÓN =====
     const CONFIG = {
-        whatsappNumber: "51943373206", // ✅ Número actualizado
+        whatsappNumber: "+51 907 569 063", // ✅ Número actualizado
         whatsappMessage: "¡Hola! Me interesa el ciclo intensivo Proyecto Hiparco.",
         
         // ===== CONFIGURACIÓN DE YOUTUBE =====
@@ -275,4 +275,5 @@
     };
 
 })();
+
 
