@@ -388,127 +388,548 @@
         // ===== DATOS DE LAS UNIVERSIDADES =====
         // ===== DATOS DE LAS UNIVERSIDADES =====
 const universidades = {
+    // ===== DATOS DE LAS UNIVERSIDADES =====
+const universidades = {
     uni: {
         nombre: "Cepre UNI",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     unsmsm: {
-    nombre: "Cepre UNMSM",
-    cursos: {
-        trigonometria: [
-            "Ángulo Trigonométrico", "Sistemas de medición angular", "Conversión entre sistemas de medición angular",
-            "Longitud de arco", "Área de un sector circular", "Número de vueltas de una rueda",
-            "Poleas y engranajes", "Razones trigonométricas de ángulos agudos", "Resoluciones de triángulos rectángulos",
-            "Área de una región triangular", "Razones Trigonométricas de ángulos notables", "Razones Trigonométricas de ángulos aproximados",
-            "Propiedades de las Razones Trigonométricas", "Razones Trigonométricas de ángulos de cualquier magnitud", "Signos de las Razones Trigonométricas",
-            "Propiedades de los Ángulos Coterminales", "Razones Trigonométricas de ángulos cuadrantales", "Reducción al primer cuadrante",
-            "Razones Trigonométricas de ángulos negativos", "Razones Trigonométricas de ángulo doble", "Razones Trigonométricas de ángulo mitad",
-            "Razones Trigonométricas de ángulo tiple", "Razones Trigonométricas de ángulos compuestos", "Transformaciones Trigonométricas",
-            "Ecuaciones Trigonométricas", "Resolución de Triángulos Oblicuángulos", "Ángulos Verticales",
-            "Ángulos Horizontales", "Puntos Cardinales", "Circunferencia Trigonométrica",
-            "Ecuación de la Circunferencia", "Funciones Trigonométricas", "Funciones Trigonométricas Inversas",
-            "Parábola", "Elipse", "Hipérbola"
-        ],
-        algebra: [
-            "Leyes de Exponentes", "Expresiones Algebraicas", "Polinomios",
-            "Potenciación", "Radicación", "Factorización",
-            "Números Reales", "Racionalización", "Productos Notables",
-            "División de Polinomios", "Teorema del Residuo", "Ecuaciones de Primer Grado",
-            "Sistema de Ecuaciones Lineales", "Planteo de Ecuaciones de Primer Grado", "Ecuaciones de Segundo Grado",
-            "Planteo de Ecuaciones de Segundo Grado", "Inecuaciones Lineales", "Inecuaciones de segundo grado",
-            "Sistema de Ecuaciones Lineales de 2 variables", "Valor Absoluto", "Cocientes Notables",
-            "Ecuaciones polinómicas", "Matrices", "Determinantes",
-            "Método de Cramer", "Sistema de Ecuaciones Lineales de 3 variables", "Inecuaciones de Grado Superior",
-            "Inecuaciones Fraccionarias", "Logaritmos", "Sistemas de Ecuaciones No Lineales",
-            "Ecuaciones e inecuaciones logarítmicas", "Ecuaciones e inecuaciones exponenciales", "Programación Lineal",
-            "Relaciones", "Funciones", "Números Complejos"
-        ],
-        fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-        aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-        geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-        quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-        razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
-    }
-},
+        nombre: "Cepre UNMSM",
+        cursos: {
+            trigonometria: [
+                { nombre: "Ángulo Trigonométrico", link: "" },
+                { nombre: "Sistemas de medición angular", link: "" },
+                { nombre: "Conversión entre sistemas de medición angular", link: "" },
+                { nombre: "Longitud de arco", link: "" },
+                { nombre: "Área de un sector circular", link: "" },
+                { nombre: "Número de vueltas de una rueda", link: "" },
+                { nombre: "Poleas y engranajes", link: "" },
+                { nombre: "Razones trigonométricas de ángulos agudos", link: "" },
+                { nombre: "Resoluciones de triángulos rectángulos", link: "" },
+                { nombre: "Área de una región triangular", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos notables", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos aproximados", link: "" },
+                { nombre: "Propiedades de las Razones Trigonométricas", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos de cualquier magnitud", link: "" },
+                { nombre: "Signos de las Razones Trigonométricas", link: "" },
+                { nombre: "Propiedades de los Ángulos Coterminales", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos cuadrantales", link: "" },
+                { nombre: "Reducción al primer cuadrante", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos negativos", link: "" },
+                { nombre: "Razones Trigonométricas de ángulo doble", link: "" },
+                { nombre: "Razones Trigonométricas de ángulo mitad", link: "" },
+                { nombre: "Razones Trigonométricas de ángulo tiple", link: "" },
+                { nombre: "Razones Trigonométricas de ángulos compuestos", link: "" },
+                { nombre: "Transformaciones Trigonométricas", link: "" },
+                { nombre: "Ecuaciones Trigonométricas", link: "" },
+                { nombre: "Resolución de Triángulos Oblicuángulos", link: "" },
+                { nombre: "Ángulos Verticales", link: "" },
+                { nombre: "Ángulos Horizontales", link: "" },
+                { nombre: "Puntos Cardinales", link: "" },
+                { nombre: "Circunferencia Trigonométrica", link: "" },
+                { nombre: "Ecuación de la Circunferencia", link: "" },
+                { nombre: "Funciones Trigonométricas", link: "" },
+                { nombre: "Funciones Trigonométricas Inversas", link: "" },
+                { nombre: "Parábola", link: "" },
+                { nombre: "Elipse", link: "" },
+                { nombre: "Hipérbola", link: "" }
+            ],
+            algebra: [
+                { nombre: "Leyes de Exponentes", link: "" },
+                { nombre: "Expresiones Algebraicas", link: "" },
+                { nombre: "Polinomios", link: "" },
+                { nombre: "Potenciación", link: "" },
+                { nombre: "Radicación", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Números Reales", link: "" },
+                { nombre: "Racionalización", link: "" },
+                { nombre: "Productos Notables", link: "" },
+                { nombre: "División de Polinomios", link: "" },
+                { nombre: "Teorema del Residuo", link: "" },
+                { nombre: "Ecuaciones de Primer Grado", link: "" },
+                { nombre: "Sistema de Ecuaciones Lineales", link: "" },
+                { nombre: "Planteo de Ecuaciones de Primer Grado", link: "" },
+                { nombre: "Ecuaciones de Segundo Grado", link: "" },
+                { nombre: "Planteo de Ecuaciones de Segundo Grado", link: "" },
+                { nombre: "Inecuaciones Lineales", link: "" },
+                { nombre: "Inecuaciones de segundo grado", link: "" },
+                { nombre: "Sistema de Ecuaciones Lineales de 2 variables", link: "" },
+                { nombre: "Valor Absoluto", link: "" },
+                { nombre: "Cocientes Notables", link: "" },
+                { nombre: "Ecuaciones polinómicas", link: "" },
+                { nombre: "Matrices", link: "" },
+                { nombre: "Determinantes", link: "" },
+                { nombre: "Método de Cramer", link: "" },
+                { nombre: "Sistema de Ecuaciones Lineales de 3 variables", link: "" },
+                { nombre: "Inecuaciones de Grado Superior", link: "" },
+                { nombre: "Inecuaciones Fraccionarias", link: "" },
+                { nombre: "Logaritmos", link: "" },
+                { nombre: "Sistemas de Ecuaciones No Lineales", link: "" },
+                { nombre: "Ecuaciones e inecuaciones logarítmicas", link: "" },
+                { nombre: "Ecuaciones e inecuaciones exponenciales", link: "" },
+                { nombre: "Programación Lineal", link: "" },
+                { nombre: "Relaciones", link: "" },
+                { nombre: "Funciones", link: "" },
+                { nombre: "Números Complejos", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
+        }
+    },
     // ===== NUEVAS UNIVERSIDADES =====
     pucp: {
         nombre: "CEPREPUCP",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     vi: {
         nombre: "CEPREVI",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     unsa: {
         nombre: "CEPRUNSA",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     unac: {
         nombre: "CEPREUNAC",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     unt: {
         nombre: "CEPREUNT",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     },
     unal: {
         nombre: "CEPREUNALM",
         cursos: {
-            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
-            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
-            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
-            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
-            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
-            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
-            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+            trigonometria: [
+                { nombre: "Razones trigonométricas", link: "" },
+                { nombre: "Identidades trigonométricas", link: "" },
+                { nombre: "Funciones trigonométricas", link: "" },
+                { nombre: "Ecuaciones trigonométricas", link: "" },
+                { nombre: "Resolución de triángulos", link: "" }
+            ],
+            algebra: [
+                { nombre: "Productos notables", link: "" },
+                { nombre: "Factorización", link: "" },
+                { nombre: "Ecuaciones lineales", link: "" },
+                { nombre: "Ecuaciones cuadráticas", link: "" },
+                { nombre: "Inecuaciones", link: "" },
+                { nombre: "Funciones", link: "" }
+            ],
+            fisica: [
+                { nombre: "Análisis vectorial", link: "" },
+                { nombre: "Cinemática (MRU, MRUV)", link: "" },
+                { nombre: "Dinámica (leyes de Newton)", link: "" },
+                { nombre: "Trabajo y energía", link: "" },
+                { nombre: "Electrostática", link: "" },
+                { nombre: "Corriente eléctrica", link: "" }
+            ],
+            aritmetica: [
+                { nombre: "Teoría de números", link: "" },
+                { nombre: "Fracciones", link: "" },
+                { nombre: "Regla de tres", link: "" },
+                { nombre: "Porcentajes", link: "" },
+                { nombre: "Interés simple y compuesto", link: "" },
+                { nombre: "Estadística básica", link: "" }
+            ],
+            geometria: [
+                { nombre: "Ángulos y triángulos", link: "" },
+                { nombre: "Semejanza de triángulos", link: "" },
+                { nombre: "Circunferencia", link: "" },
+                { nombre: "Geometría del espacio", link: "" },
+                { nombre: "Áreas y volúmenes", link: "" },
+                { nombre: "Geometría analítica", link: "" }
+            ],
+            quimica: [
+                { nombre: "Tabla periódica", link: "" },
+                { nombre: "Enlaces químicos", link: "" },
+                { nombre: "Reacciones químicas", link: "" },
+                { nombre: "Estequiometría", link: "" },
+                { nombre: "Química orgánica", link: "" },
+                { nombre: "Soluciones", link: "" }
+            ],
+            razonamiento: [
+                { nombre: "Razonamiento lógico", link: "" },
+                { nombre: "Problemas con edades", link: "" },
+                { nombre: "Problemas con móviles", link: "" },
+                { nombre: "Problemas con relojes", link: "" },
+                { nombre: "Razonamiento geométrico", link: "" },
+                { nombre: "Sucesiones y series", link: "" }
+            ]
         }
     }
 };
@@ -541,7 +962,16 @@ function generarHTMLUniversidad(id) {
                     </div>
                     <div class="temas-lista">
                         <ul>
-                            ${uni.cursos[curso.key].map(tema => `<li>${tema}</li>`).join('')}
+                            ${uni.cursos[curso.key].map(tema => {
+                                // Si es un objeto con nombre y link
+                                if (typeof tema === 'object' && tema.link) {
+                                    return `<li><a href="${tema.link}" target="_blank" class="tema-link">${tema.nombre} <i class="fas fa-download"></i></a></li>`;
+                                } 
+                                // Si es solo texto (sin link)
+                                else {
+                                    return `<li>${tema}</li>`;
+                                }
+                            }).join('')}
                         </ul>
                     </div>
                 </div>
@@ -552,43 +982,6 @@ function generarHTMLUniversidad(id) {
     html += '</div>';
     return html;
 }
-
-// ===== CARGAR UNIVERSIDADES AL INICIAR =====
-document.addEventListener('DOMContentLoaded', function() {
-    const container = document.getElementById('cursos-container');
-    let htmlCompleto = '';
-    
-    // Generar HTML para cada universidad
-    htmlCompleto += generarHTMLUniversidad('uni');
-    htmlCompleto += generarHTMLUniversidad('unsmsm');
-    htmlCompleto += generarHTMLUniversidad('pucp');
-    htmlCompleto += generarHTMLUniversidad('vi');
-    htmlCompleto += generarHTMLUniversidad('unsa');
-    htmlCompleto += generarHTMLUniversidad('unac');
-    htmlCompleto += generarHTMLUniversidad('unt');
-    htmlCompleto += generarHTMLUniversidad('unal');
-    
-    container.innerHTML = htmlCompleto;
-    
-    // Funcionalidad de los botones de universidades
-    const uniBtns = document.querySelectorAll('.uni-btn');
-    const cursosUni = document.querySelectorAll('.cursos-uni');
-    
-    uniBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            uniBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-            
-            cursosUni.forEach(c => c.classList.remove('active'));
-            
-            const uni = this.getAttribute('data-uni');
-            const contenedor = document.getElementById(`cursos-${uni}`);
-            if (contenedor) {
-                contenedor.classList.add('active');
-            }
-        });
-    });
-});
     </script>
 
     <script src="script.js"></script>
