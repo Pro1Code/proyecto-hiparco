@@ -156,8 +156,100 @@
             margin-right: 10px;
         }
 
+        /* ===== ESTILOS PARA CURSOS EXPANDIDOS (SIN HOVER) ===== */
+        .curso-expandido {
+            background: white;
+            border-radius: 16px;
+            margin-bottom: 20px;
+            border: 2px solid var(--border);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .curso-expandido:hover {
+            border-color: var(--primary);
+            box-shadow: 0 10px 15px -3px rgba(251, 191, 36, 0.2);
+        }
+
+        .curso-header {
+            background: linear-gradient(135deg, var(--light-bg), white);
+            padding: 18px 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .curso-header .curso-icon {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--dark-bg);
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .curso-header h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+            margin: 0;
+            flex-grow: 1;
+        }
+
+        .temas-lista {
+            padding: 20px 24px;
+            background: var(--light-bg);
+        }
+
+        .temas-lista ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 8px 20px;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .temas-lista li {
+            padding: 6px 0;
+            color: var(--text-dark);
+            font-size: 0.95rem;
+            border-bottom: 1px dashed var(--border);
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .temas-lista li::before {
+            content: "✓";
+            color: var(--secondary);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .temas-lista li:hover {
+            color: var(--primary);
+            padding-left: 25px;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
+            .temas-lista ul {
+                grid-template-columns: 1fr;
+            }
+            
+            .curso-header {
+                padding: 15px 18px;
+            }
+            
+            .curso-header h4 {
+                font-size: 1.1rem;
+            }
+            
             .uni-btn {
                 padding: 8px 12px;
                 font-size: 0.85rem;
@@ -241,1182 +333,8 @@
                     <button class="uni-btn" data-uni="unal">CEPREUNALM</button>
                 </div>
 
-                <!-- Contenedor de cursos que cambian según universidad -->
-                <!-- Cepre UNI -->
-                <!-- Contenedor de cursos que cambian según universidad -->
-                <div id="cursos-container">
-                    <!-- Cepre UNI -->
-                    <div class="cursos-uni active" id="cursos-uni">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> Cepre UNI - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- Cepre UNMSM -->
-                                        <!-- Cepre UNMSM -->
-                    <div class="cursos-uni" id="cursos-unsmsm">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> Cepre UNMSM - Temario</h3>
-                        
-                        <!-- Curso: Trigonometría -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-shapes"></i></div>
-                                <h4>Trigonometría</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Ángulo Trigonométrico</li>
-                                    <li>Sistemas de medición angular</li>
-                                    <li>Conversión entre sistemas de medición angular</li>
-                                    <li>Longitud de arco</li>
-                                    <li>Área de un sector circular</li>
-                                    <li>Número de vueltas de una rueda</li>
-                                    <li>Poleas y engranajes</li>
-                                    <li>Razones trigonométricas de ángulos agudos</li>
-                                    <li>Resoluciones de triángulos rectángulos</li>
-                                    <li>Área de una región triangular</li>
-                                    <li>Razones Trigonométricas de ángulos notables</li>
-                                    <li>Razones Trigonométricas de ángulos aproximados</li>
-                                    <li>Propiedades de las Razones Trigonométricas</li>
-                                    <li>Razones Trigonométricas de ángulos de cualquier magnitud</li>
-                                    <li>Signos de las Razones Trigonométricas</li>
-                                    <li>Propiedades de los Ángulos Coterminales</li>
-                                    <li>Razones Trigonométricas de ángulos cuadrantales</li>
-                                    <li>Reducción al primer cuadrante</li>
-                                    <li>Razones Trigonométricas de ángulos negativos</li>
-                                    <li>Razones Trigonométricas de ángulo doble</li>
-                                    <li>Razones Trigonométricas de ángulo mitad</li>
-                                    <li>Razones Trigonométricas de ángulo tiple</li>
-                                    <li>Razones Trigonométricas de ángulos compuestos</li>
-                                    <li>Transformaciones Trigonométricas</li>
-                                    <li>Ecuaciones Trigonométricas</li>
-                                    <li>Resolución de Triángulos Oblicuángulos</li>
-                                    <li>Ángulos Verticales</li>
-                                    <li>Ángulos Horizontales</li>
-                                    <li>Puntos Cardinales</li>
-                                    <li>Circunferencia Trigonométrica</li>
-                                    <li>Ecuación de la Circunferencia</li>
-                                    <li>Funciones Trigonométricas</li>
-                                    <li>Funciones Trigonométricas Inversas</li>
-                                    <li>Parábola</li>
-                                    <li>Elipse</li>
-                                    <li>Hipérbola</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Álgebra -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-square-root-alt"></i></div>
-                                <h4>Álgebra</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Leyes de Exponentes</li>
-                                    <li>Expresiones Algebraicas</li>
-                                    <li>Polinomios</li>
-                                    <li>Potenciación</li>
-                                    <li>Radicación</li>
-                                    <li>Factorización</li>
-                                    <li>Números Reales</li>
-                                    <li>Racionalización</li>
-                                    <li>Productos Notables</li>
-                                    <li>División de Polinomios</li>
-                                    <li>Teorema del Residuo</li>
-                                    <li>Ecuaciones de Primer Grado</li>
-                                    <li>Sistema de Ecuaciones Lineales</li>
-                                    <li>Planteo de Ecuaciones de Primer Grado</li>
-                                    <li>Ecuaciones de Segundo Grado</li>
-                                    <li>Planteo de Ecuaciones de Segundo Grado</li>
-                                    <li>Inecuaciones Lineales</li>
-                                    <li>Inecuaciones de segundo grado</li>
-                                    <li>Sistema de Ecuaciones Lineales de 2 variables</li>
-                                    <li>Valor Absoluto</li>
-                                    <li>Cocientes Notables</li>
-                                    <li>Ecuaciones polinómicas</li>
-                                    <li>Matrices</li>
-                                    <li>Determinantes</li>
-                                    <li>Método de Cramer</li>
-                                    <li>Sistema de Ecuaciones Lineales de 3 variables</li>
-                                    <li>Inecuaciones de Grado Superior</li>
-                                    <li>Inecuaciones Fraccionarias</li>
-                                    <li>Logaritmos</li>
-                                    <li>Sistemas de Ecuaciones No Lineales</li>
-                                    <li>Ecuaciones e inecuaciones logarítmicas</li>
-                                    <li>Ecuaciones e inecuaciones exponenciales</li>
-                                    <li>Programación Lineal</li>
-                                    <li>Relaciones</li>
-                                    <li>Funciones</li>
-                                    <li>Números Complejos</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Física -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-atom"></i></div>
-                                <h4>Física</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Análisis vectorial</li>
-                                    <li>Cinemática (MRU, MRUV)</li>
-                                    <li>Dinámica (leyes de Newton)</li>
-                                    <li>Trabajo y energía</li>
-                                    <li>Electrostática</li>
-                                    <li>Corriente eléctrica</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Aritmética -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-calculator"></i></div>
-                                <h4>Aritmética</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Teoría de números</li>
-                                    <li>Fracciones</li>
-                                    <li>Regla de tres</li>
-                                    <li>Porcentajes</li>
-                                    <li>Interés simple y compuesto</li>
-                                    <li>Estadística básica</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Geometría -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-draw-polygon"></i></div>
-                                <h4>Geometría</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Ángulos y triángulos</li>
-                                    <li>Semejanza de triángulos</li>
-                                    <li>Circunferencia</li>
-                                    <li>Geometría del espacio</li>
-                                    <li>Áreas y volúmenes</li>
-                                    <li>Geometría analítica</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Química -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-flask"></i></div>
-                                <h4>Química</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Tabla periódica</li>
-                                    <li>Enlaces químicos</li>
-                                    <li>Reacciones químicas</li>
-                                    <li>Estequiometría</li>
-                                    <li>Química orgánica</li>
-                                    <li>Soluciones</li>
-                                </ul>
-                            </div>
-                        </div>
-                        
-                        <!-- Curso: Razonamiento Matemático -->
-                        <div class="curso-expandido">
-                            <div class="curso-header">
-                                <div class="curso-icon"><i class="fas fa-brain"></i></div>
-                                <h4>Raz. Matemático</h4>
-                            </div>
-                            <div class="temas-lista">
-                                <ul>
-                                    <li>Razonamiento lógico</li>
-                                    <li>Problemas con edades</li>
-                                    <li>Problemas con móviles</li>
-                                    <li>Problemas con relojes</li>
-                                    <li>Razonamiento geométrico</li>
-                                    <li>Sucesiones y series</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- CEPREPUCP -->
-                    <div class="cursos-uni" id="cursos-pucp">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREPUCP - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- CEPREVI -->
-                    <div class="cursos-uni" id="cursos-vi">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREVI - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- CEPRUNSA -->
-                    <div class="cursos-uni" id="cursos-unsa">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPRUNSA - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- CEPREUNAC -->
-                    <div class="cursos-uni" id="cursos-unac">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNAC - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- CEPREUNT -->
-                    <div class="cursos-uni" id="cursos-unt">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNT - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-
-                    <!-- CEPREUNALM -->
-                    <div class="cursos-uni" id="cursos-unal">
-                        <h3 class="uni-title"><i class="fas fa-university"></i> CEPREUNALM - Temario</h3>
-                        <div class="courses-grid-7">
-                            <!-- Trigonometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-shapes"></i></div>
-                                    <span>Trigonometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razones trigonométricas</li>
-                                        <li>✓ Identidades trigonométricas</li>
-                                        <li>✓ Funciones trigonométricas</li>
-                                        <li>✓ Ecuaciones trigonométricas</li>
-                                        <li>✓ Resolución de triángulos</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Álgebra -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-square-root-alt"></i></div>
-                                    <span>Álgebra</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Productos notables</li>
-                                        <li>✓ Factorización</li>
-                                        <li>✓ Ecuaciones lineales</li>
-                                        <li>✓ Ecuaciones cuadráticas</li>
-                                        <li>✓ Inecuaciones</li>
-                                        <li>✓ Funciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Física -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-atom"></i></div>
-                                    <span>Física</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Análisis vectorial</li>
-                                        <li>✓ Cinemática (MRU, MRUV)</li>
-                                        <li>✓ Dinámica (leyes de Newton)</li>
-                                        <li>✓ Trabajo y energía</li>
-                                        <li>✓ Electrostática</li>
-                                        <li>✓ Corriente eléctrica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Aritmética -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-calculator"></i></div>
-                                    <span>Aritmética</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Teoría de números</li>
-                                        <li>✓ Fracciones</li>
-                                        <li>✓ Regla de tres</li>
-                                        <li>✓ Porcentajes</li>
-                                        <li>✓ Interés simple y compuesto</li>
-                                        <li>✓ Estadística básica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Geometría -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-draw-polygon"></i></div>
-                                    <span>Geometría</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Ángulos y triángulos</li>
-                                        <li>✓ Semejanza de triángulos</li>
-                                        <li>✓ Circunferencia</li>
-                                        <li>✓ Geometría del espacio</li>
-                                        <li>✓ Áreas y volúmenes</li>
-                                        <li>✓ Geometría analítica</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Química -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-flask"></i></div>
-                                    <span>Química</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Tabla periódica</li>
-                                        <li>✓ Enlaces químicos</li>
-                                        <li>✓ Reacciones químicas</li>
-                                        <li>✓ Estequiometría</li>
-                                        <li>✓ Química orgánica</li>
-                                        <li>✓ Soluciones</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <!-- Razonamiento Matemático -->
-                            <div class="course-hover-card">
-                                <div class="course-item">
-                                    <div class="course-icon"><i class="fas fa-brain"></i></div>
-                                    <span>Raz. Matemático</span>
-                                    <div class="hover-indicator"><i class="fas fa-chevron-down"></i></div>
-                                </div>
-                                <div class="course-topics">
-                                    <ul>
-                                        <li>✓ Razonamiento lógico</li>
-                                        <li>✓ Problemas con edades</li>
-                                        <li>✓ Problemas con móviles</li>
-                                        <li>✓ Problemas con relojes</li>
-                                        <li>✓ Razonamiento geométrico</li>
-                                        <li>✓ Sucesiones y series</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <div class="course-hover-card empty-card"></div>
-                        </div>
-                    </div>
-                </div> <!-- Cierra cursos-container -->
+                <!-- Contenedor de cursos generado por JavaScript -->
+                <div id="cursos-container"></div>
 
                 <!-- HORARIOS -->
                 <h2><i class="fas fa-clock"></i> Horarios</h2>
@@ -1467,30 +385,210 @@
     </footer>
 
     <script>
-        // Funcionalidad para cambiar cursos según universidad
-        document.addEventListener('DOMContentLoaded', function() {
-            const uniBtns = document.querySelectorAll('.uni-btn');
-            const cursosUni = document.querySelectorAll('.cursos-uni');
+        // ===== DATOS DE LAS UNIVERSIDADES =====
+        // ===== DATOS DE LAS UNIVERSIDADES =====
+const universidades = {
+    uni: {
+        nombre: "Cepre UNI",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    unsmsm: {
+    nombre: "Cepre UNMSM",
+    cursos: {
+        trigonometria: [
+            "Ángulo Trigonométrico", "Sistemas de medición angular", "Conversión entre sistemas de medición angular",
+            "Longitud de arco", "Área de un sector circular", "Número de vueltas de una rueda",
+            "Poleas y engranajes", "Razones trigonométricas de ángulos agudos", "Resoluciones de triángulos rectángulos",
+            "Área de una región triangular", "Razones Trigonométricas de ángulos notables", "Razones Trigonométricas de ángulos aproximados",
+            "Propiedades de las Razones Trigonométricas", "Razones Trigonométricas de ángulos de cualquier magnitud", "Signos de las Razones Trigonométricas",
+            "Propiedades de los Ángulos Coterminales", "Razones Trigonométricas de ángulos cuadrantales", "Reducción al primer cuadrante",
+            "Razones Trigonométricas de ángulos negativos", "Razones Trigonométricas de ángulo doble", "Razones Trigonométricas de ángulo mitad",
+            "Razones Trigonométricas de ángulo tiple", "Razones Trigonométricas de ángulos compuestos", "Transformaciones Trigonométricas",
+            "Ecuaciones Trigonométricas", "Resolución de Triángulos Oblicuángulos", "Ángulos Verticales",
+            "Ángulos Horizontales", "Puntos Cardinales", "Circunferencia Trigonométrica",
+            "Ecuación de la Circunferencia", "Funciones Trigonométricas", "Funciones Trigonométricas Inversas",
+            "Parábola", "Elipse", "Hipérbola"
+        ],
+        algebra: [
+            "Leyes de Exponentes", "Expresiones Algebraicas", "Polinomios",
+            "Potenciación", "Radicación", "Factorización",
+            "Números Reales", "Racionalización", "Productos Notables",
+            "División de Polinomios", "Teorema del Residuo", "Ecuaciones de Primer Grado",
+            "Sistema de Ecuaciones Lineales", "Planteo de Ecuaciones de Primer Grado", "Ecuaciones de Segundo Grado",
+            "Planteo de Ecuaciones de Segundo Grado", "Inecuaciones Lineales", "Inecuaciones de segundo grado",
+            "Sistema de Ecuaciones Lineales de 2 variables", "Valor Absoluto", "Cocientes Notables",
+            "Ecuaciones polinómicas", "Matrices", "Determinantes",
+            "Método de Cramer", "Sistema de Ecuaciones Lineales de 3 variables", "Inecuaciones de Grado Superior",
+            "Inecuaciones Fraccionarias", "Logaritmos", "Sistemas de Ecuaciones No Lineales",
+            "Ecuaciones e inecuaciones logarítmicas", "Ecuaciones e inecuaciones exponenciales", "Programación Lineal",
+            "Relaciones", "Funciones", "Números Complejos"
+        ],
+        fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+        aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+        geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+        quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+        razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+    }
+},
+    // ===== NUEVAS UNIVERSIDADES =====
+    pucp: {
+        nombre: "CEPREPUCP",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    vi: {
+        nombre: "CEPREVI",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    unsa: {
+        nombre: "CEPRUNSA",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    unac: {
+        nombre: "CEPREUNAC",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    unt: {
+        nombre: "CEPREUNT",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    },
+    unal: {
+        nombre: "CEPREUNALM",
+        cursos: {
+            trigonometria: ["Razones trigonométricas", "Identidades trigonométricas", "Funciones trigonométricas", "Ecuaciones trigonométricas", "Resolución de triángulos"],
+            algebra: ["Productos notables", "Factorización", "Ecuaciones lineales", "Ecuaciones cuadráticas", "Inecuaciones", "Funciones"],
+            fisica: ["Análisis vectorial", "Cinemática (MRU, MRUV)", "Dinámica (leyes de Newton)", "Trabajo y energía", "Electrostática", "Corriente eléctrica"],
+            aritmetica: ["Teoría de números", "Fracciones", "Regla de tres", "Porcentajes", "Interés simple y compuesto", "Estadística básica"],
+            geometria: ["Ángulos y triángulos", "Semejanza de triángulos", "Circunferencia", "Geometría del espacio", "Áreas y volúmenes", "Geometría analítica"],
+            quimica: ["Tabla periódica", "Enlaces químicos", "Reacciones químicas", "Estequiometría", "Química orgánica", "Soluciones"],
+            razonamiento: ["Razonamiento lógico", "Problemas con edades", "Problemas con móviles", "Problemas con relojes", "Razonamiento geométrico", "Sucesiones y series"]
+        }
+    }
+};
+
+// ===== FUNCIÓN PARA GENERAR HTML =====
+function generarHTMLUniversidad(id) {
+    const uni = universidades[id];
+    if (!uni) return '';
+    
+    let html = `<div class="cursos-uni ${id === 'uni' ? 'active' : ''}" id="cursos-${id}">`;
+    html += `<h3 class="uni-title"><i class="fas fa-university"></i> ${uni.nombre} - Temario</h3>`;
+    
+    const cursos = [
+        { key: 'trigonometria', icono: 'fa-shapes', nombre: 'Trigonometría' },
+        { key: 'algebra', icono: 'fa-square-root-alt', nombre: 'Álgebra' },
+        { key: 'fisica', icono: 'fa-atom', nombre: 'Física' },
+        { key: 'aritmetica', icono: 'fa-calculator', nombre: 'Aritmética' },
+        { key: 'geometria', icono: 'fa-draw-polygon', nombre: 'Geometría' },
+        { key: 'quimica', icono: 'fa-flask', nombre: 'Química' },
+        { key: 'razonamiento', icono: 'fa-brain', nombre: 'Raz. Matemático' }
+    ];
+    
+    cursos.forEach(curso => {
+        if (uni.cursos[curso.key]) {
+            html += `
+                <div class="curso-expandido">
+                    <div class="curso-header">
+                        <div class="curso-icon"><i class="fas ${curso.icono}"></i></div>
+                        <h4>${curso.nombre}</h4>
+                    </div>
+                    <div class="temas-lista">
+                        <ul>
+                            ${uni.cursos[curso.key].map(tema => `<li>${tema}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+    });
+    
+    html += '</div>';
+    return html;
+}
+
+// ===== CARGAR UNIVERSIDADES AL INICIAR =====
+document.addEventListener('DOMContentLoaded', function() {
+    const container = document.getElementById('cursos-container');
+    let htmlCompleto = '';
+    
+    // Generar HTML para cada universidad
+    htmlCompleto += generarHTMLUniversidad('uni');
+    htmlCompleto += generarHTMLUniversidad('unsmsm');
+    htmlCompleto += generarHTMLUniversidad('pucp');
+    htmlCompleto += generarHTMLUniversidad('vi');
+    htmlCompleto += generarHTMLUniversidad('unsa');
+    htmlCompleto += generarHTMLUniversidad('unac');
+    htmlCompleto += generarHTMLUniversidad('unt');
+    htmlCompleto += generarHTMLUniversidad('unal');
+    
+    container.innerHTML = htmlCompleto;
+    
+    // Funcionalidad de los botones de universidades
+    const uniBtns = document.querySelectorAll('.uni-btn');
+    const cursosUni = document.querySelectorAll('.cursos-uni');
+    
+    uniBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            uniBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
             
-            uniBtns.forEach(btn => {
-                btn.addEventListener('click', function() {
-                    // Remover active de todos los botones
-                    uniBtns.forEach(b => b.classList.remove('active'));
-                    // Agregar active al botón clickeado
-                    this.classList.add('active');
-                    
-                    // Ocultar todos los contenedores de cursos
-                    cursosUni.forEach(c => c.classList.remove('active'));
-                    
-                    // Mostrar el contenedor correspondiente
-                    const uni = this.getAttribute('data-uni');
-                    const contenedor = document.getElementById(`cursos-${uni}`);
-                    if (contenedor) {
-                        contenedor.classList.add('active');
-                    }
-                });
-            });
+            cursosUni.forEach(c => c.classList.remove('active'));
+            
+            const uni = this.getAttribute('data-uni');
+            const contenedor = document.getElementById(`cursos-${uni}`);
+            if (contenedor) {
+                contenedor.classList.add('active');
+            }
         });
+    });
+});
     </script>
 
     <script src="script.js"></script>
