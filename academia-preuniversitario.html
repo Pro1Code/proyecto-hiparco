@@ -959,7 +959,13 @@ function generarHTMLUniversidad(id) {
                     <div class="temas-lista">
                         <ul>
                             ${uni.cursos[curso.key].map(tema => {
-                                return `<li>${tema.nombre}</li>`;
+                                if (tema.link && tema.link !== "") {
+                                    // Si tiene link, crear un enlace clickeable
+                                    return `<li><a href="${tema.link}" target="_blank" class="tema-link">${tema.nombre} <i class="fas fa-external-link-alt"></i></a></li>`;
+                                } else {
+                                    // Si no tiene link, solo mostrar el texto
+                                    return `<li>${tema.nombre}</li>`;
+                                }
                             }).join('')}
                         </ul>
                     </div>
